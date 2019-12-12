@@ -13,7 +13,7 @@
 
 Route::get('/', 'ListingsController@index');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('/listings', 'ListingsController');
